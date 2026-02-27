@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Learning Tasks</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        h1 { color: #333; }
+        .task { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #333; }
+        .task.completed { border-left-color: #28a745; text-decoration: line-through; opacity: 0.7; }
+        label { cursor: pointer; display: block; }
+        input[type="checkbox"] { margin-right: 10px; transform: scale(1.2); }
+    </style>
+</head>
+<body>
+    <h1>Git Learning Tasks</h1>
+    
+    <div class="task">
+        <label><input type="checkbox"> Initialize a new git repository</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Create a new file called "readme.txt" with your name in it</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Check the status of your repository</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Stage the readme.txt file</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Commit your changes with a message</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> View your commit history</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Create a new branch called "feature"</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Switch to the "feature" branch</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Add a new file called "favorites.txt" with your favorite things</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Commit the new file on the feature branch</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Switch back to the main branch</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Merge the feature branch into main</label>
+    </div>
+    
+    <div class="task">
+        <label><input type="checkbox"> Delete the feature branch</label>
+    </div>
+    
+    <script>
+        document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+            cb.addEventListener('change', function() {
+                this.closest('.task').classList.toggle('completed', this.checked);
+            });
+        });
+    </script>
+</body>
+</html>
